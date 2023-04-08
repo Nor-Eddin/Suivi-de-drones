@@ -1,0 +1,62 @@
+﻿@page
+@using suivi_des_drones.Core.Models;
+@model IndexModel
+@{
+   ViewData["Title"] = "Page acceuil";
+   // string title="suivi des drones"; // premiere étape: .ToUpper();
+}
+@functions{
+    string title = "suivi des drones";
+
+    List<Drone> PrepareListOfDrones()
+    {
+        return this.Model.Drones;
+    }
+
+    string GetTitle()
+    {
+        return this.title.ToUpper();
+    }
+
+    List<HealthStatus> PrepareListStatus()
+    {
+        return this.Model.StatusList;
+    }
+}
+
+<div class="text-center">
+    <h1 class="display-4">@this.GetTitle()</h1>
+   
+</div>
+<div class="row">
+     <div class="col-1" >Status:</div>
+     <div class="col-1">
+     <select>
+        @foreach (var item in this.PrepareListStatus())
+        {
+            <option value="@item.Id">@item.Label</option>
+        }
+     </select>
+    </div>
+</div>
+
+<table class="table" >
+    <thead >
+        <tr >
+            <th >Matricule</th>
+            <th>Status</th>
+            <th>Date de creation</th>
+        </tr>
+
+    </thead>
+    <tbody>
+    @foreach(var item in PrepareListOfDrones())
+    {
+        <tr>
+            <td>@item.Matricule</td>
+            <td>@item.HearthStatus.Label</td>
+            <td>@item.CreationDate.ToString("f")</td>
+        </tr>
+    }        
+    </tbody>
+</table>
