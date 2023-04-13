@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "suivi-des drones.Web.UI", "suivi-des drones.Web.UI\suivi-des drones.Web.UI.csproj", "{A7F98E86-E921-48E7-BCCD-ED3830A3EE06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "suivi-des drones.Web.UI", "suivi-des drones.Web.UI\suivi-des drones.Web.UI.csproj", "{A7F98E86-E921-48E7-BCCD-ED3830A3EE06}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{8160450F-CBB6-49AF-8CA6-E8871EC909B4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{DB6B3BDE-C7BC-4D94-8D75-87E9913A2008}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "suivi-des-drones.Core.Models", "suivi-des-drones.Core.Models\suivi-des-drones.Core.Models.csproj", "{74D7D4F6-D89C-4598-A4C8-5919DBA0C8BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "suivi-des-drones.Core.Models", "suivi-des-drones.Core.Models\suivi-des-drones.Core.Models.csproj", "{74D7D4F6-D89C-4598-A4C8-5919DBA0C8BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "suivi-des-drones.Core.Interfaces", "suivi-des-drones.Core.Interfaces\suivi-des-drones.Core.Interfaces.csproj", "{B09A106E-EF10-4156-A4EF-56ABA26D66AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "suivi-des-drones.Core.Interfaces", "suivi-des-drones.Core.Interfaces\suivi-des-drones.Core.Interfaces.csproj", "{B09A106E-EF10-4156-A4EF-56ABA26D66AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "suivi-des-drones.Core.Application", "suivi-des-drones.Core.Repositories\suivi-des-drones.Core.Application.csproj", "{DE534F42-36AF-4FC6-A202-08C22EC2A281}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "suivi-des-drones.Core.Application", "suivi-des-drones.Core.Repositories\suivi-des-drones.Core.Application.csproj", "{DE534F42-36AF-4FC6-A202-08C22EC2A281}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "suivi-des-drones.Core.Infrastructure", "suivi-des-drones.Core.Infrastructure\suivi-des-drones.Core.Infrastructure.csproj", "{AB61AF24-0F8C-4F41-BC75-853F42F37F82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{DE534F42-36AF-4FC6-A202-08C22EC2A281}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE534F42-36AF-4FC6-A202-08C22EC2A281}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE534F42-36AF-4FC6-A202-08C22EC2A281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB61AF24-0F8C-4F41-BC75-853F42F37F82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB61AF24-0F8C-4F41-BC75-853F42F37F82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB61AF24-0F8C-4F41-BC75-853F42F37F82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB61AF24-0F8C-4F41-BC75-853F42F37F82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{74D7D4F6-D89C-4598-A4C8-5919DBA0C8BA} = {8160450F-CBB6-49AF-8CA6-E8871EC909B4}
 		{B09A106E-EF10-4156-A4EF-56ABA26D66AA} = {8160450F-CBB6-49AF-8CA6-E8871EC909B4}
 		{DE534F42-36AF-4FC6-A202-08C22EC2A281} = {8160450F-CBB6-49AF-8CA6-E8871EC909B4}
+		{AB61AF24-0F8C-4F41-BC75-853F42F37F82} = {8160450F-CBB6-49AF-8CA6-E8871EC909B4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F11DE464-D4D9-41B3-B177-FF8893C15502}

@@ -23,7 +23,7 @@ namespace suivi_des_drones.Core.Application.Repositories
             return new()
             {
                 new(),
-                new()8/
+                new()
             };
         }
         #endregion

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using suivi_des_drones.Core.Infrastructure.DataLayers;
 using suivi_des_drones.Core.Models;
 
 namespace suivi_des_drones.Web.UI.Pages
@@ -27,33 +28,33 @@ namespace suivi_des_drones.Web.UI.Pages
         }*/
 
         //deuxieme facon de faire
-        /* public IActionResult OnGet()
+         public IActionResult OnGet()
          {
              IActionResult result = this.Page();
-
-             if (true)
-             {
-                 result=this.BadRequest();
-             }
-             return result;
-         }*/
-
-        //Troisiemes facons de faire, de maniére asynchrone
-        public async Task<IActionResult> OnGetAsync()
-        {
             this.SetListOfDrones();
             this.SetListOfStatus();
-            return this.Page();
-        }
+
+            return result;
+         }
+
+        //Troisiemes facons de faire, de maniére asynchrone
+        //public async Task<IActionResult> OnGetAsync()
+        //{
+        //    this.SetListOfDrones();
+        //    this.SetListOfStatus();
+        //    return this.Page();
+        //}
         #endregion
 
         #region Internal methods
         private void SetListOfDrones()
         {
-            this.Drones.Add(new() { Matricule = "54XXD0", CreationDate = DateTime.Now });
-            this.Drones.Add(new() { Matricule = "54XXD1", CreationDate = DateTime.Now.AddDays(-150) });
-            this.Drones.Add(new() { Matricule = "54XXD2", CreationDate = DateTime.Now.AddDays(-25) });
-            this.Drones.Add(new() { Matricule = "54XXD3", CreationDate = DateTime.Now.AddMonths(-14) });
+            //this.Drones.Add(new() { Matricule = "54XXD0", CreationDate = DateTime.Now });
+            //this.Drones.Add(new() { Matricule = "54XXD1", CreationDate = DateTime.Now.AddDays(-150) });
+            //this.Drones.Add(new() { Matricule = "54XXD2", CreationDate = DateTime.Now.AddDays(-25) });
+            //this.Drones.Add(new() { Matricule = "54XXD3", CreationDate = DateTime.Now.AddMonths(-14) });
+            var dataLayer = new SqlServerDroneDataLayer();
+            this.Drones = dataLayer.GetList();
         }
         private void SetListOfStatus()
         {
@@ -65,7 +66,7 @@ namespace suivi_des_drones.Web.UI.Pages
 
         #region Properties
         public List<Drone> Drones { get; set; } = new();
-        public List<HealthStatus>StatusList { get; set; } = new();
+        public List<HealthStatus> StatusList { get; set; } = new();
         #endregion
     }
 }
